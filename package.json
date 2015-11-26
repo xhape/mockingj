@@ -23,10 +23,10 @@
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0"
   },
- "scripts": {
-  "start": "sails lift",
-  "debug": "node debug app.js"
-	},
+  "scripts": {
+    "debug": "node debug app.js",
+    "start": "node app.js"
+  },
   "main": "app.js",
   "repository": {
     "type": "git",
