@@ -2,7 +2,7 @@
   "name": "mockingj",
   "private": false,
   "version": "0.0.1",
-  "description": "a Sails application",
+  "description": "REST Mocking Server",
   "keywords": [],
   "dependencies": {
     "ejs": "~0.8.4",
@@ -21,7 +21,8 @@
     "include-all": "~0.1.3",
     "rc": "~0.5.0",
     "sails": "~0.11.0",
-    "sails-disk": "~0.10.0"
+    "sails-disk": "~0.10.0",
+    "sails-mongo": "~0.11.2"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -30,8 +31,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/mock-mpower.git"
+    "url": "https://github.com/amjavonitalla/mockingj.git"
   },
-  "author": "anonymous node/sails user",
-  "license": ""
+  "author": "Angelo Javonitalla",
+  "license": "GNU LESSER GENERAL PUBLIC LICENSE v3"
 }
