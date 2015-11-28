@@ -13,3 +13,7 @@ Making the server fail is hard but with MockingJ you can set the response code o
 Automated Testing
 -----------------
 Updating the response when testing a different scenario is tedious. MockingJ lets you group mock responses into a test case which you can access through a unique URL.
+
+License
+--------
+GNU LESSER GENERAL PUBLIC LICENSE VERSION 3
