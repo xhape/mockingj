@@ -15,24 +15,20 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
+  '/linker/styles/bootstrap/bootstrap.min.css', '/styles/app-theme.css', '/styles/fonts.css', '/styles/docs.min.css'
 ];
-
 
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
-  
-  // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
-
-  // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/**/*.js',
-
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
-  'js/**/*.js'
+  'linker/js/socket.io-client/socket.io.js', 'linker/js/sails.io.js/sails.io.js', 'linker/js/lodash/lodash.compat.js',
+  'linker/js/jquery/jquery.min.js', 'linker/js/bootstrap/bootstrap.min.js',
+  'linker/js/angular/angular.min.js', 'linker/js/angular-route/angular-route.js', 'linker/js/angular-bootstrap/ui-bootstrap.min.js',
+  'linker/js/angular-sails/angular-sails.min.js', '/js/angular/utils/lodash.js',
+  'js/docs.min.js'
 ];
+
+module.exports.jsFilesToInjectNoPathChange = jsFilesToInject;
 
 
 // Client-side HTML templates are injected using the sources below

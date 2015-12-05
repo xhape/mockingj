@@ -4,7 +4,7 @@
     <title>MockingJ</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <script>
       (function(h,o,t,j,a,r){
@@ -18,9 +18,10 @@
     </script>
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/linker/styles/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/app-theme.css">
     <link rel="stylesheet" href="/styles/fonts.css">
-    <link rel="stylesheet" href="/styles/importer.css">
-    <link rel="stylesheet" href="/styles/sails-theme.css">
+    <link rel="stylesheet" href="/styles/docs.min.css">
     <!--STYLES END-->
   </head>
 
@@ -28,7 +29,15 @@
     <%- body %>
 
     <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/linker/js/socket.io-client/socket.io.js"></script>
+    <script src="/linker/js/sails.io.js/sails.io.js"></script>
+    <script src="/linker/js/jquery/jquery.min.js"></script>
+    <script src="/linker/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/linker/js/angular/angular.min.js"></script>
+    <script src="/linker/js/angular-route/angular-route.js"></script>
+    <script src="/linker/js/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="/linker/js/angular-sails/angular-sails.min.js"></script>
+    <script src="/js/docs.min.js"></script>
     <!--SCRIPTS END-->
 
 
