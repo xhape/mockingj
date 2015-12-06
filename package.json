@@ -29,7 +29,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower install && grunt build"
   },
   "main": "app.js",
   "repository": {
