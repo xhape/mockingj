@@ -15,7 +15,7 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  '/linker/styles/bootstrap/bootstrap.min.css', '/styles/app-theme.css', '/styles/fonts.css', '/styles/docs.min.css'
+  '/linker/styles/bootstrap/bootstrap.min.css', '/styles/app-theme.css', '/styles/fonts.css', '/styles/docs.css'
 ];
 
 // Client-side javascript files to inject in order

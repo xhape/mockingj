@@ -2,7 +2,7 @@
 	<div class="container">
 		<h1>MockingJ</h1>
 
-		<p>REST Mocking Server for Developers and Testers</p>
+		<h3>REST Mocking Server for Developers and Testers</h3>
 	</div>
 	<a href="https://github.com/amjavonitalla/mockingj">
 		<img style="position: absolute; top: 0; right: 0; border: 0;"
@@ -14,32 +14,67 @@
 <div class="container bs-docs-container">
 	<div class="row">
 		<div class="col-md-9" role="main">
-			<div class="col-xs-12 col-lg-9">
-				<h1 id="use-cases">Use Cases</h1>
-				<ul class="getting-started">
+			<div class="bs-docs-section">
+				<h1 id="about" class="page-header">MockingJ</h1>
+
+				<p><strong>MockingJ</strong> is a lightweight application that lets you mock HTTP response. You can easily install it locally or use the <a
+							href="https://mockingj.herokuapp.com/admin">demo</a> site. </p>
+				<p>Made on top of <a href="http://sailsjs.org/">sailsjs</a> MockingJ can be extended and <customized></customized> to your needs</p>
+			</div>
+			<div class="bs-docs-section">
+				<h1 id="use-cases" class="page-header">Use Cases</h1>
+				<p><ul>
 					<li>
 						<h3>Mobile and Client App Developers</h3>
+
 						<p>The backend is not yet ready. Instead of hard-coding expected response in your code mock the response and point your app to
 							MockingJ.</p>
 					</li>
 					<li>
 						<h3>Testing Negative Scenarios</h3>
+
 						<p>Making the server fail is hard but with MockingJ you can set the response code or even make the request timeout.</p>
 					</li>
 					<li>
 						<h3>Automated Testing</h3>
-						<p>Updating the response when testing different scenarios is tedious. MockingJ lets you group mock responses into a test case which you
+
+						<p>Testing a new test case is as easy as switching a new URL. Updating the response when testing different scenarios is tedious. MockingJ
+							lets you group mock responses into a test case which you
 							can
-							access through a unique URL. Testing a new test case is as easy as switching a new URL.</p>
+							access through a unique URL. </p>
 					</li>
-				</ul>
+				</ul></p>
+
 			</div>
+			<div class="bs-docs-section">
+				<h1 id="getting-started" class="page-header">Getting Started</h1>
+				<p>You can skip this section if you already installed NodeJs, Grunt, Bower, and Sails</p>
+				<p>
+					<ol>
+					<li><a href="https://nodejs.org/en/download/">Download</a> and install NodeJs</li>
+					<li>Install <code>grunt-cli</code> globally with <code>npm install -g grunt-cli</code>.</li>
+					<li>Install <code>bower</code> globally with <code>npm install -g bower</code>.</li>
+					<li>Install <code>sails</code> stable release with <code>npm install -g sails</code>.</li>
+				</ol>
+				</p>
+			</div>
+			<div class="bs-docs-section">
+				<h1 id="installing-mockingj" class="page-header">Installing MockingJ</h1>
+			</div>
+			<div class="bs-docs-section">
+				<h1 id="creating-mock-response" class="page-header">Creating your Mock Response</h1>
+			</div>
+			<div class="bs-docs-section">
+				<h1 id="test-case" class="page-header">Test Case</h1>
+			</div>
+
 		</div>
 		<div class="col-md-3" role="complementary">
 			<nav class="bs-docs-sidebar">
 				<ul class="nav bs-docs-sidenav">
+					<li><a href="#about">About</a></li>
 					<li><a href="#use-cases">Use Cases</a></li>
-					<li><a href="#gettting-started">Getting Started</a></li>
+					<li><a href="#getting-started">Getting Started</a></li>
 					<li><a href="#installing-mockingj">Installing MockingJ</a></li>
 					<li><a href="#creating-mock-response">Creating your Mock Response</a></li>
 					<li><a href="#test-case">Test Case</a></li>
@@ -48,3 +83,9 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	setTimeout(function sunrise() {
+		document.getElementsByClassName('bs-docs-header')[0].style.backgroundColor = '#118798';
+	}, 0);
+</script>
