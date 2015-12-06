@@ -1,7 +1,7 @@
 {
   "name": "mockingj",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "REST Mocking Server",
   "keywords": [],
   "dependencies": {
@@ -29,8 +29,7 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js",
-    "postinstall": "grunt install"
+    "start": "node app.js"
   },
   "engines": {
     "node": "4.2.3"
