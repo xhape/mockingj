@@ -21,8 +21,7 @@
 							href="https://mockingj.herokuapp.com/admin">demo</a> site. </p>
 
 				<p>Made on top of <a href="http://sailsjs.org/">sailsjs</a> MockingJ can be extended and
-					<customized></customized>
-					to your needs
+					customized to your needs
 				</p>
 			</div>
 			<div class="bs-docs-section">
@@ -56,20 +55,97 @@
 			<div class="bs-docs-section">
 				<h1 id="getting-started" class="page-header">Getting Started</h1>
 
-				<p>You can skip this section if you already installed NodeJs, Grunt, Bower, and Sails</p>
+				<p>Install NodeJS and Grunt. You can skip this section if you've already installed <strong>NodeJs</strong>,
+					<strong>Grunt</strong>, <strong>Bower</strong>, and <strong>Sails</strong>.</p>
 
 				<ol>
 					<li><a href="https://nodejs.org/en/download/">Download</a> and install NodeJs</li>
 					<li>Install <code>grunt-cli</code> globally with <code>npm install -g grunt-cli</code>.</li>
 					<li>Install <code>bower</code> globally with <code>npm install -g bower</code>.</li>
-					<li>Install <code>sails</code> stable release with <code>npm install -g sails</code>.</li>
+					<li>Finally install <code>sails</code> stable release with <code>npm install -g sails</code>.</li>
 				</ol>
 			</div>
 			<div class="bs-docs-section">
 				<h1 id="installing-mockingj" class="page-header">Installing MockingJ</h1>
+				Follow the steps below to install MockingJ and it's dependencies.
+
+				<ol>
+					<li>
+						Fork or clone MockingJ from <a href="https://github.com/amjavonitalla/mockingj">GitHub</a>
+					</li>
+					<li>
+						When installing it for the first time run <code>npm install</code> in the MokingJ root directory. This will download grunt task
+						dependencies and other dependencies
+					</li>
+					<li>
+						Run <code>grunt bower</code> and <code>grunt build</code> to download bower dependencies and build MockingJ.
+					</li>
+					<li>
+						Start the server using <code>sails lift</code>. Every time you need to run the server just use <code>sails lift</code>, you may skip the
+						previous steps.
+					</li>
+				</ol>
 			</div>
 			<div class="bs-docs-section">
 				<h1 id="creating-mock-response" class="page-header">Creating your Mock Response</h1>
+
+				<div class="bs-callout bs-callout-warning">
+					<h4>UI on the Way</h4>
+
+					<p>We are not yet done building the UI but you can use your favorite REST client for the mean time. We are using <a
+								href="https://www.getpostman.com/">Postman</a> for this</p>
+				</div>
+
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+						<tr>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Required</th>
+							<th>Description</th>
+							<th>Sample</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>url</td>
+							<td>string</td>
+							<td>true</td>
+							<td>The URL to mock. As of this moment wildcard is not yet supported.</td>
+							<td>/api/user/123</td>
+						</tr>
+						<tr>
+							<td>method</td>
+							<td>string</td>
+							<td>The mock URL HTTP method type.</td>
+							<td>GET, POST, PUT, DELETE</td>
+						</tr>
+						<tr>
+							<td>response</td>
+							<td>json</td>
+							<td>The response body to return when a request is made to the URL. It can return a JSON object or a JSON array</td>
+							<td>
+								[ {"username" : "angelo", "role" : "admin" },
+									{"username" : "river", "role" : "admin"} ],
+								{"username" : "angelo", "role" : "admin" }
+							</td>
+						</tr>
+						<tr>
+							<td>responseCode</td>
+							<td>integer</td>
+							<td>The response code to return when the request is made</td>
+							<td>The following are the currently supported response codes 200, 400, 403, 404, 500</td>
+						</tr>
+						<tr>
+							<td>request</td>
+							<td>json</td>
+							<td>[Optional] The response code to return when the request is made</td>
+							<td>The following are the currently supported response codes 200, 400, 403, 404, 500</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<div class="bs-docs-section">
 				<h1 id="test-case" class="page-header">Test Case</h1>
