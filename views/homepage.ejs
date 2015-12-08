@@ -23,6 +23,12 @@
 				<p>Made on top of <a href="http://sailsjs.org/">sailsjs</a> MockingJ can be extended and
 					customized to your needs
 				</p>
+
+				<div class="bs-callout bs-callout-warning">
+					<h4>Development Ongoing</h4>
+
+					<p>The application is still under construction, it's already usable but it will take more effort to make it work. </p>
+				</div>
 			</div>
 			<div class="bs-docs-section">
 				<h1 id="use-cases" class="page-header">Use Cases</h1>
@@ -55,7 +61,7 @@
 			<div class="bs-docs-section">
 				<h1 id="getting-started" class="page-header">Getting Started</h1>
 
-				<p>Install NodeJS and Grunt. You can skip this section if you've already installed <strong>NodeJs</strong>,
+				<p>Install application dependencies. You can skip this section if you've already installed <strong>NodeJs</strong>,
 					<strong>Grunt</strong>, <strong>Bower</strong>, and <strong>Sails</strong>.</p>
 
 				<ol>
@@ -89,7 +95,7 @@
 			<div class="bs-docs-section">
 				<h1 id="creating-mock-response" class="page-header">Creating your Mock Response</h1>
 
-				<div class="bs-callout bs-callout-warning">
+				<div class="bs-callout bs-callout-info">
 					<h4>UI on the Way</h4>
 
 					<p>We are not yet done building the UI but you can use your favorite REST client for the mean time. We are using <a
@@ -129,7 +135,7 @@
 							<td>The response body to return when a request is made to the URL. It can return a JSON object or a JSON array</td>
 							<td>
 								[ {"username" : "angelo", "role" : "admin" },
-									{"username" : "river", "role" : "admin"} ],
+								{"username" : "river", "role" : "admin"} ],
 								{"username" : "angelo", "role" : "admin" }
 							</td>
 						</tr>
@@ -144,8 +150,10 @@
 							<td>request</td>
 							<td>json</td>
 							<td>false</td>
-							<td>[Optional] The response code to return when the request is made</td>
-							<td>The following are the currently supported response codes 200, 400, 403, 404, 500</td>
+							<td>The response code to return when the request is made</td>
+							<td>The following are the currently supported response codes 200, 400, 403, 404, 500. MockingJ will return a bad response if a different
+								response code is specified.
+							</td>
 						</tr>
 						</tbody>
 					</table>
@@ -153,6 +161,9 @@
 			</div>
 			<div class="bs-docs-section">
 				<h1 id="test-case" class="page-header">Test Case</h1>
+			</div>
+			<div class="bs-docs-section">
+				<h1 id="faq" class="page-header">Frequently Asked Questions</h1>
 			</div>
 
 		</div>
@@ -165,6 +176,7 @@
 					<li><a href="#installing-mockingj">Installing MockingJ</a></li>
 					<li><a href="#creating-mock-response">Creating your Mock Response</a></li>
 					<li><a href="#test-case">Test Case</a></li>
+					<li><a href="#faq">FAQ</a></li>
 				</ul>
 			</nav>
 		</div>
