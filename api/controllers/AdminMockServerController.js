@@ -56,7 +56,7 @@ module.exports = {
 
     var id = req.param("id");
     MockResponse.destroy({id : id}).exec(function(err, result){
-      return _handleResponse(err, null, result)
+      return _handleResponse(err, res, result)
     });
   }
 };

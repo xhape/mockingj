@@ -15,7 +15,8 @@ function _handleResponse(res, request, result) {
     }
   } else if (result && result.length > 1) {
     console.log("Multiple mocks encountered");
-    return res.ok();
+    //TODO rotate return
+    return _buildResponse(res, result[0]);
   } else {
     console.log("The request \"" + request.originalUrl + " " + request.method + "\" is not yet mocked!");
     return res.badRequest("Response not yet mocked");
@@ -30,6 +31,8 @@ function _buildDelayedResponse(res, mockresponse) {
 
 function _buildResponse (res, mockresponse) {
   switch (mockresponse.responseCode) {
+    case 200:
+      return res.ok(mockresponse.response);
     case 400:
       return res.badRequest(mockresponse.response);
       break;
@@ -43,12 +46,12 @@ function _buildResponse (res, mockresponse) {
       return res.serverError(mockresponse.response);
       break;
     default:
-      return res.ok(mockresponse.response);
+      return res.badRequest("Response code that yet supported");
   }
 }
 
-function _getRequest (req) {
-  var request = {};
+function _extendRequest (req) {
+  var request = req;
   request.originalUrl = req.url;
   request.method = req.method;
   request.urlToken  = req.url.split("?");
@@ -63,9 +66,9 @@ function _getRequest (req) {
 module.exports = {
 
   handleRequest: function (req, res) {
-    console.log("URL: " + req.url + " ,Method: " + req.method);
+    console.log("Request: URL= " + req.url + " ,Method= " + req.method);
 
-    var request = _getRequest(req);
+    var request = _extendRequest(req);
     MockResponse.find({url: request.baseUrl, method: req.method}).then(function (result) {
       _handleResponse(res, request, result);
     }).catch(function (err) {
