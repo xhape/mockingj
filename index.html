@@ -23,17 +23,16 @@
 
 <section class="main-content">
     <h1>
-        <a id="mockingj-intro" class="anchor" href="#mockingj-intro" aria-hidden="true"><span
-                aria-hidden="true" class="octicon octicon-link"></span></a>About</h1>
+        <a id="about" class="anchor" href="#about" aria-hidden="true"><span
+                aria-hidden="true"></span></a>About</h1>
 
     <p><strong>MockingJ</strong> is a lightweight application that lets you mock HTTP response. You can easily install
         it locally or use the <a href="https://mockingj.herokuapp.com/admin" target="_blank">demo</a> site. Made on top
-        of <a
-                href="http://sailsjs.org/" target="_blank">sailsjs</a> MockingJ can be extended and customized to your
+        of <a href="http://sailsjs.org/" target="_blank">sailsjs</a> MockingJ can be extended and customized to your
         needs</p>
 
     <h1>
-        <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true">
+        <a id="use-cases" class="anchor" href="#use-casess" aria-hidden="true">
             <span aria-hidden="true" class="octicon octicon-link"></span></a>Use Cases
     </h1>
 
@@ -56,6 +55,47 @@
                 can access through a unique URL.</p>
         </li>
     </ul>
+    </p>
+
+    <h1>
+        <a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started
+    </h1>
+
+    <p>Install application dependencies. You can skip this section if you've already installed <strong>NodeJs</strong>,
+        <strong>Grunt</strong>, <strong>Bower</strong>, and <strong>Sails</strong>.</p>
+
+    <ol>
+        <li><a href="https://nodejs.org/en/download/" target="_blank">Download</a> and install NodeJs</li>
+        <li>Install <code>grunt-cli</code> globally with <code>npm install -g grunt-cli</code>.</li>
+        <li>Install <code>bower</code> globally with <code>npm install -g bower</code>.</li>
+        <li>Finally install <code>sails</code> stable release with <code>npm install -g sails</code>.</li>
+    </ol>
+
+    <h1>
+        <a id="installing-mockingj" class="anchor" href="#installing-mockingj" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span></a>Installing MockingJ
+    </h1>
+
+    <p>
+        Follow the steps below to install MockingJ and it's dependencies.
+
+    <ol>
+        <li>
+            Fork or clone MockingJ from <a href="https://github.com/amjavonitalla/mockingj">GitHub</a>
+        </li>
+        <li>
+            When installing it for the first time run <code>npm install</code> in the MokingJ root directory. This will
+            download grunt task dependencies and other dependencies
+        </li>
+        <li>
+            Run <code>grunt bower</code> and <code>grunt build</code> to download bower dependencies and build MockingJ.
+        </li>
+        <li>
+            Start the server using <code>sails lift</code>. Every time you need to run the server just use <code>sails
+            lift</code>, you may skip the previous steps.
+        </li>
+    </ol>
     </p>
 
     <footer class="site-footer">
