@@ -8,8 +8,14 @@
 module.exports = {
 
   attributes: {
-    code: 'string',
-    mockResponse: 'string'
+    code: {
+      type : 'string',
+      unique: true
+    },
+    mockRequest: {
+      collection: 'mockRequest',
+      required: false
+    }
   }
 
 };

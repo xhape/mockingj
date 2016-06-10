@@ -46,19 +46,17 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 
-  'post /admin/mock' : 'AdminMockServerController.update',
-  'get /admin/mock' : 'AdminMockServerController.getAll',
-  'get /admin/mock/:id' : 'AdminMockServerController.get',
-  'delete /admin/mock/:id' : 'AdminMockServerController.destroy',
+  //admin route declaration should go first, else it may fall in the mock request controller or test case controller
+
 
   '/tc/:testCaseId/*': {
-    controller: 'MockServerController',
+    controller: 'TestCaseControllerHandler',
     action: 'handleTestCase',
     skipAssets: true
   },
 
   '/*': {
-    controller: 'MockServerController',
+    controller: 'MockRequestController',
     action: 'handleRequest',
     skipAssets: true
   }

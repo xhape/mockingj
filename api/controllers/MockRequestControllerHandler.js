@@ -7,7 +7,7 @@
 
 function _handleResponse(res, request, result) {
   if (result && result.length == 1) {
-    var mockResponse = result[0];
+    var mockResponse = result[0].response;
     if (mockResponse.delay) {
       return _buildDelayedResponse(res, mockResponse);
     } else {
@@ -15,8 +15,8 @@ function _handleResponse(res, request, result) {
     }
   } else if (result && result.length > 1) {
     console.log("Multiple mocks encountered");
-    //TODO rotate return
-    return _buildResponse(res, result[0]);
+    //TODO randomize returned result
+    return _buildResponse(res, result[0].response);
   } else {
     console.log("The request \"" + request.originalUrl + " " + request.method + "\" is not yet mocked!");
     return res.badRequest("Response not yet mocked");
@@ -69,21 +69,13 @@ module.exports = {
     console.log("Request: URL= " + req.url + " ,Method= " + req.method);
 
     var request = _extendRequest(req);
-    MockResponse.find({url: request.baseUrl, method: req.method}).then(function (result) {
+    MockRequest.find({url: request.baseUrl, method: req.method}).then(function (result) {
       _handleResponse(res, request, result);
     }).catch(function (err) {
       console.log("Error processing request " + request.originalUrl);
       return res.badRequest(err);
     });
-  },
-
-  /**
-   * with the introduction of test case we can now create multiple mockresponse with
-   *
-   */
-  handleTestCase: function (req, res) {
-    var testCaseId = req.param("testCaseId");
-    return res.ok();
   }
+
 };
 

@@ -8,12 +8,14 @@
 module.exports = {
 
   attributes: {
-    url: 'string',
-    originalUrl: 'string',
-    method: 'string',
-    response: 'json',
-    responseCode: 'integer',
-    request: 'json'
+    request: {
+      model : 'request',
+      required: true
+    },
+    response: {
+      model : 'response',
+      required: true
+    }
   }
 
 };
